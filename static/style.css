@@ -1,0 +1,375 @@
+@font-face {
+  font-family: "HoneyLemone";
+  src: url("{{ url_for('static', filename='fontes/HoneyLemone.ttf') }}") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LEMONMILK";
+  src: url("{{ url_for('static', filename='fontes/lemon_milk/LEMONMILK-Regular.otf') }}") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LEMONMILK_BOLD";
+  src: url("{{ url_for('static', filename='fontes/lemon_milk/LEMONMILK-Bold.otf') }}") format("otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "LEMONMILK_BOLD";
+  src: url("{{ url_for('static', filename='fontes/lemon_milk/LEMONMILK-Medium.otf') }}") format("otf");
+  font-weight: 400;
+}
+
+.header {
+  /* background-color: brown; */
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+}
+
+.header_menu {
+  color: #fa5207;
+}
+
+.headerLogo {
+  width: 20%;
+}
+
+.header_nav_links {
+  width: 18%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.header_nav_links a {
+  color: #2d4626;
+  font-size: larger;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header_nav_links a:hover {
+  color: #fa5207;
+}
+
+.header_btn {
+  background-color: #fa5207;
+  /* Cor de fundo */
+  border: none;
+  /* Remover bordas */
+  color: white;
+  /* Cor do texto */
+  padding: 7px 40px;
+  /* Espaçamento interno */
+  text-align: center;
+  /* Alinhamento do texto */
+  text-decoration: none;
+  /* Remover sublinhado do texto */
+  display: inline-block;
+  /* Para permitir margens e preenchimento */
+  font-size: 16px;
+  /* Tamanho da fonte */
+  margin: 4px 2px;
+  /* Margem */
+  cursor: pointer;
+  /* Cursor de mão ao passar por cima */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+}
+
+.header_btn:hover {
+  background-color: #c44e1a;
+  /* Cor de fundo ao passar o mouse */
+}
+
+.lista_btn {
+  background-color: #58fa0f;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  width: 10%;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  color: #fa5207;
+}
+
+.main_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  padding: 0% 20%;
+  background-image: url("{{ url_for('static', filename='assets/bg_caridade.png') }}");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "LEMONMILK", sans-serif;
+}
+
+.main_page_title {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.main_page_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.main_page_box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  min-height: 200px;
+  background-color: #c04e1a;
+  color: white;
+  border-radius: 20px;
+  padding: 15px 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.main_page_box_title {
+  font-size: 22px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.main_page_box_description {
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+.main_page_box:hover {
+  transform: scale(1.2);
+}
+
+.tela {
+  padding: 20px 90px;
+  font-family: "LEMONMILK", sans-serif;
+}
+
+.laranja {
+  background-color: rgba(192, 78, 26, 0.83);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 60px;
+
+}
+
+.laranja h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.ulario {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  border-radius: 20px;
+
+}
+
+.ulTit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.ulTit i {
+  color: #fa5207;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.toggle-value-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  background-color: #b5c3a8;
+  border-radius: 100px;
+  padding: 5px;
+  position: relative;
+  width: 600px;
+  height: 100px;
+  /* Ajuste conforme necessário */
+}
+
+.toggle-container input[type="radio"] {
+  display: none;
+}
+
+.toggle-label {
+  flex: 1;
+  padding: 10px 0px;
+  cursor: pointer;
+  border-radius: 30px;
+  color: #ddd;
+  font-weight: bolder;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  width: 300px;
+  /* Ajuste conforme necessário */
+  background-color: #f4511e;
+  border-radius: 100px;
+  transition: transform 0.3s;
+}
+
+#mensal:checked ~ .toggle-slider {
+  transform: translateX(0);
+  background-color: #f4511e;
+}
+
+#unica:checked ~ .toggle-slider {
+  transform: translateX(300px);
+  /* Ajuste conforme necessário */
+  background-color: #00e676;
+}
+
+.toggle-container input[type="radio"]:checked + .toggle-label {
+  color: white;
+}
+
+.toggle-label-value {
+  display: flex;
+  align-items: center;
+  background-color: #67905595;
+  border-radius: 100px;
+  padding: 15px 30px;
+  color: white;
+  position: relative;
+  margin: 0px 5px;
+  font-weight: bold;
+}
+
+.toggle-value-btn input[type="radio"] {
+  display: none;
+}
+
+.toggle-value-btn input[type="radio"]:checked + .toggle-label-value {
+  background: #2d4626;
+  color: white;
+}
+
+.ulario-info-user {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+
+}
+
+.ulario-info-user h3 {
+  text-align: start;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: #2d4626;
+}
+
+.ulario-info-user label {
+  font-weight: 900;
+  color: #2d4626;
+}
+
+.user-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.user-input label {
+  margin-right: 20px;
+}
+
+.user-input input {
+  border: 1px solid #2d4626;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+#name {
+  width: 250px;
+}
+
+#sexo {
+  border: 1px solid #2d4626;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+#tiposDeDoacao {
+  border: 1px solid #2d4626;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.check-permission {
+  margin-bottom: 60px;
+}
+
+.d-user {
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finish-btn {
+  display: flex;
+  align-items: center;
+  background-color: #58fa0f;
+  padding: 20px 35px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.termos p {
+  text-align: center;
+}

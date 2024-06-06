@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://kit.fontawesome.com/e68953718c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+  <title>Projeto alimentação</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header_menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <img class="headerLogo" src="{{ url_for('static', filename='assets/logo.png') }}" />
+    <div class="header_nav_links">
+      <a href="./index.html">Home</a>
+      <a href="/">Quem Somos</a>
+      <a href="/">Login</a>
+    </div>
+    <div class="header_btn">
+      <span>Cadastre-se</span>
+    </div>
+    <div class="lista_btn">
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-square-instagram"></i>
+      <i class="fa-brands fa-square-facebook"></i>
+      <i class="fa-brands fa-square-whatsapp"></i>
+      <i class="fa-solid fa-envelope"></i>
+    </div>
+  </div>
+
+  <div class="main_page">
+    <h1 class="main_page_title">
+      Contribuir com uma doação é plantar a semente da esperança na vida de
+      alguém, cultivando um futuro melhor para todos.
+    </h1>
+    <div class="main_page_items">
+      <div class="main_page_box">
+        <h2 class="main_page_box_title">Nosso objetivo</h2>
+        <p class="main_page_box_description">
+          Nossa missão é reduzir o desperdício, a má distribuição de alimentos
+          e contribuir para a diminuição de gases de efeito estufa no planeta.
+        </p>
+      </div>
+      <div class="main_page_box">
+        <h2 class="main_page_box_title">O que fazemos</h2>
+        <p class="main_page_box_description">
+          Através da plataforma Alimentação, nós e empresas parceiras doamos e
+          encaminhamos alimentos que perderam valor comercial e assim gerar um
+          grande impacto social e ambiental.
+        </p>
+      </div>
+      <div class="main_page_box">
+        <h2 class="main_page_box_title">Como você pode participar</h2>
+        <p class="main_page_box_description">
+          Clique aqui, cadastre-se e escolha o melhor plano e comece a nos
+          ajudar a fazer o encaminhamento correto dos alimentos
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="tela">
+    <div class="laranja">
+      <h1>ESCOLHA COMO DOAR:</h1>
+      <div class="ulario">
+        <div class="ulTit">
+          <h3>doações flexíveis e de acordo com o seu bolso</h3>
+          <i class="fa-solid fa-face-smile"></i>
+        </div>
+        <div class="toggle">
+          <div class="toggle-container">
+            <input type="radio" id="mensal" name="toggle" checked />
+            <label for="mensal" class="toggle-label">MENSAL</label>
+            <input type="radio" id="unica" name="toggle" />
+            <label for="unica" class="toggle-label">ÚNICA</label>
+            <div class="toggle-slider"></div>
+          </div>
+        </div>
+        <div class="toggle-value-container">
+          <div class="toggle-value-btn">
+            <input type="radio" id="30" name="toggleValue" checked />
+            <label for="30" class="toggle-label-value">R$ 30,00</label>
+          </div>
+          <div class="toggle-value-btn">
+            <input type="radio" id="55" name="toggleValue" />
+            <label for="55" class="toggle-label-value">R$ 55,00</label>
+          </div>
+          <div class="toggle-value-btn">
+            <input type="radio" id="100" name="toggleValue" />
+            <label for="100" class="toggle-label-value">R$ 100,00</label>
+          </div>
+          <div class="toggle-value-btn">
+            <input type="radio" id="outroValor" name="toggleValue" />
+            <label for="outroValor" class="toggle-label-value">OUTRO VALOR</label>
+          </div>
+        </div>
+        <div class="ulario-info-user">
+          <h3>Informe os seus dados de contato:</h3>
+          <div class="user-input">
+            <label>NOME*</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="user-input">
+            <label>EMAIL*</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="user-input">
+            <label>NUMERO DE TELEFONE*</label>
+            <input type="tel" id="telefone" />
+          </div>
+          <div class="user-input">
+            <label>DATA DE NASCIMENTO*</label>
+            <input type="date" id="data" />
+          </div>
+          <div class="user-input">
+            <label>SEXO*</label>
+            <select id="sexo">
+              <option value="">SELECIONE</option>
+              <option value="M">MASCULINO</option>
+              <option value="F">FEMININO</option>
+              <option value="N">PREFIRO NÃO INFORMAR</option>
+            </select>
+          </div>
+          <h3>Deseja receber informações sobre o impacto das doações recebidas e demais campanhas?</h3>
+          <div class="check-permission">
+            <input type="checkbox" id="permission" name="permissionValue" />
+            <label for="permission" class="permission-label">Sim, por favor. Desejo receber essas comunicações.</label>
+          </div>
+          <h3 class="d-user">INFORME SEUS DADOS PARA DOAÇÃO</h3>
+          <div class="user-input">
+            <label>CPF*</label>
+            <input type="text" id="cpf" />
+          </div>
+          <div class="user-input">
+            <label>FORMAS DE DOAÇÃO*</label>
+            <select id="tiposDeDoacao">
+              <option value="">SELECIONE</option>
+              <option value="CC">CARTÃO DE CREDITO</option>
+              <option value="PIX">PIX</option>
+              <option value="BOLETO">BOLETO</option>
+            </select>
+          </div>
+          <div class="check-permission">
+            <input type="checkbox" id="permissionDados" name="permissionDadosValue" />
+            <label for="permissionDados" class="permission-label">Desejo manter minha doação e meus dados anônimos</label>
+          </div>
+          <h3>Informe seu endereço:</h3>
+          <div class="user-input">
+            <label>CEP*</label>
+            <input type="text" id="cep" />
+          </div>
+          <div class="user-input">
+            <label>RUA*</label>
+            <input type="text" id="rua" />
+          </div>
+          <div class="user-input">
+            <label>NÚMERO*</label>
+            <input type="text" id="numeroCasa" />
+          </div>
+          <div class="user-input">
+            <label>COMPLEMENTO</label>
+            <input type="text" id="complemento" />
+          </div>
+          <div class="user-input">
+            <label>BAIRRO*</label>
+            <input type="text" id="bairro" />
+          </div>
+          <div class="user-input">
+            <label>CIDADE*</label>
+            <input type="text" id="cidade" />
+          </div>
+          <div class="user-input">
+            <label>ESTADO*</label>
+            <input type="text" id="estado" />
+          </div>
+          <div class="check-permission">
+            <input type="checkbox" id="permissionData" name="permissionDataValue" />
+            <label for="permissionData" class="permission-label">Li e aceito as Políticas de privacidade*</label>
+          </div>
+        </div>
+        <div class="footer">
+          <div></div>
+          <div class="finish-btn">
+            <span onclick="cadastrarDoacao()">FINALIZAÇÃO DOAÇÃO</span>
+          </div>
+          <div class="termos">
+            <p>
+              Informações Fiscais <br />
+              Política de Cookies <br />
+              Termos de Serviço
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function cadastrarDoacao() {
+      const data = {
+        DoacaoID: Math.floor(Math.random() * 10000),
+        DoadorID: Math.floor(Math.random() * 10000),
+        TipoDoacao: document.querySelector('input[name="toggleValue"]:checked').id,
+        Valor: document.querySelector('input[name="toggleValue"]:checked').id,
+        MeioPagamento: document.getElementById('tiposDeDoacao').value,
+        DesejaReceberImpacto: document.getElementById('permission').checked
+      };
+
+      fetch('http://127.0.0.1:5000/doacao', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Doação cadastrada com sucesso!');
+      })
+      .catch((error) => {
+        console.error('Erro:', error);
+      });
+    }
+  </script>
+</body>
+
+</html>
